@@ -1,0 +1,240 @@
+/*
+Theme Name: NMC 2016
+Theme URI: http://wordpress.org/themes/nmc2016
+Author: Vinicius Ribeiro
+Author URI: http://vlribeiro.com.br
+Description: Mobile friendly rewriting of the NMC website theme
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: nmc, mobile, flexible
+Text Domain: nmc
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import 'https://fonts.googleapis.com/css?family=Abel|Lato:400,400i,700,700i&subset=latin-ext';
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Abel', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	text-transform: uppercase;
+}
+
+body {
+	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+  background-color: rgba(238, 238, 238, 1);
+}
+
+a {
+	color: rgba(255,27,116,1);
+}
+
+.relative {
+	position: relative;
+}
+
+.nmc-top-bar {
+	position: relative;
+	background-color: rgba(80,0,80,1);
+	padding: .2rem .5rem;
+	color: rgba(255,204,0,1);
+	font-size: 2.6rem;
+	text-align: right;
+}
+
+.nmc-top-bar__action-button {
+	z-index: 100;
+	padding: .4rem;
+	position: relative;
+}
+
+.nmc-top-bar__logo {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	text-align: center;
+	height: 100%;
+}
+
+.nmc-top-bar__logo img {
+	height: 80%;
+	width: auto;
+}
+
+.nmc-top-bar__menu {
+	font-size: 1rem;
+}
+
+.nmc-top-bar__menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nmc-top-bar__menu ul li {
+	text-align: center;
+}
+
+.nmc-top-bar__menu a {
+	font-family: 'Abel', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+	color: rgba(255,204,0,1);
+	display: block;
+	padding: .1rem 0;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+.nmc-header {
+	background-color: rgba(80,0,80,1);
+}
+
+.nmc-header__menu {
+	font-family: 'Abel', 'Helvetica', 'Helvetica Neue', 'Arial', sans-serif;
+	color: rgba(255,204,0,1);
+	display: block;
+	padding: .1rem 0;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+}
+
+.nmc-header__logo img {
+	padding: .7rem 0;
+}
+
+.nmc-header__menu a {
+	color: rgba(255,204,0,1);
+	transition: color .3s ease-in-out, background .3s ease-in-out;
+}
+
+.nmc-header__menu a:hover {
+	color: rgba(90,28,87,1);
+	background-color: rgba(255,204,0,1);
+}
+
+.capa-post {
+	background-repeat: no-repeat;
+	min-height: 22rem;
+	background-size: cover;
+	background-position: center;
+	padding: 1rem;
+	display: block;
+	background-blend-mode: overlay;
+}
+
+.capa-post.capa-post--destaque {
+	min-height: 28rem;
+}
+
+.capa-post h1 {
+	font-size: 1.8rem;
+	color: rgba(255,27,116,1);
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	line-height: 120%;
+}
+
+.capa-post h1 span {
+	background-color: rgba(255,204,0,1);
+	padding: 0 .2rem;
+}
+
+.capa-post .capa-post__detalhes {
+	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	background-color: rgba(255,204,0,1);
+	padding: 0 .2rem;
+	color: rgba(80,0,80,1);
+}
+
+.capa-post:not(.capa-post--aberto) .capa-post__detalhes {
+	display: none;
+}
+
+.capa-post--aberto {
+	display: flex;
+	align-items: flex-end;
+}
+
+.capa-post:not(.capa-post--aberto):hover .capa-post__detalhes {
+	display: block;
+	font-size: .8rem;
+	padding: .4rem;
+}
+
+.capa-post__detalhes h2 {
+	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
+	font-size: 1rem;
+	text-transform: none;
+	color: rgba(255,27,116,1);
+}
+
+.capa-post.capa-post--destaque h1 {
+	font-size: 1.8rem;
+}
+
+.capa-post.capa-post--destaque h2 {
+	font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 40.063em) {
+	.capa-post:not(.capa-post--destaque) {
+		margin: .4rem;
+	}
+}
+
+.row:nth-child(odd) .capa-post:not(.capa-post--destaque):nth-child(1), .row:nth-child(even) .capa-post:not(.capa-post--destaque):nth-child(2) {
+	flex: 2;
+}
+
+.pages-navigation {
+	padding: 0;
+}
+
+.pages-navigation a {
+	display: block;
+	background-color: rgba(255,204,0,1);
+	padding: 1rem;
+	color: #fff;
+	text-align: center;
+	text-transform: lowercase;
+	transition: .3s background ease-in-out, .3s color ease-in-out;
+}
+
+.pages-navigation a:hover {
+	color: rgba(255,204,0,1);
+	background-color: #fff;
+}
+
+footer {
+	background-color: rgba(80,0,80,1);
+	padding: 1rem;
+}
+
+.titulo-post-mobile {
+	background-color: rgba(255,204,0,1);
+	color: rgba(80,0,80,1);
+	font-size: .8rem;
+	padding: .4rem 1rem;
+}
+
+.titulo-post-mobile h1, .titulo-post-mobile h2 {
+	color: rgba(255,27,116,1);
+}
+
+.titulo-post-mobile h2 {
+	font-family: 'Lato';
+	font-weight: normal;
+	font-size: 1rem;
+	text-transform: none;
+}
+
+.conteudo-post {
+	padding: 1rem;
+	text-align: justify;
+}
+
+.comentarios-secao {
+  border-top: 2px solid rgba(255,27,116,1);
+  padding: 2rem 1rem;
+}
