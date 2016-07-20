@@ -8,7 +8,12 @@
       <?php $stickyCount = 0; ?>
 
 			<?php if ( is_home() && is_front_page() && !is_paged() ) :
-				$stickyCount = count(get_option( 'sticky_posts' ));
+				$sticked = get_option( 'sticky_posts' );
+
+        $activeSticked = new WP_Query( array('post__in' => $sticked) );
+
+        $stickyCount = $activeSticked->found_posts;
+
 			endif; ?>
 
 			<?php
