@@ -28,7 +28,7 @@
       ?>
         <?php if ($newRow) : ?>
           <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-        <?php endif; ?>
+        <?php endif; echo get_post_format(); ?>
           <?php
     				/*
     				 * Include the Post-Format-specific template for the content.

@@ -61,3 +61,9 @@ function custom_youtube_oembed( $code ){
         $code = '<div class="flex-video widescreen">' . $code . '</div>';
     return $code;
 }
+
+
+function theme_slug_setup() {
+   add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );

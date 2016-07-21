@@ -15,7 +15,7 @@
       $('.nmc-top-bar__action-button').toggleClass('fa-times');
     }
 
-    var linearGradient = 'linear-gradient(135deg, rgba(90,38,87,.4) 0%, rgba(238,43,114,.4) 50%, rgba(254,189,36,.4) 100%)';
+    var linearGradient = 'linear-gradient(135deg, rgba(80,0,80,.6) 0%, rgba(255,27,116,.6) 50%, rgba(255,204,0,.6) 100%)';
 
     var hoverCapa = function(e) {
       var capaPost = $(this);
@@ -34,8 +34,19 @@
     }
   })();
 
+  NmcApp.fullBleed = (function() {
+    var config = function() {
+      $('.conteudo-post p:has(.bleed-image)').addClass('full-bleed');
+    }
+
+    return {
+      config: config
+    }
+  })();
+
   NmcApp.init = function() {
     NmcApp.events.config();
+    NmcApp.fullBleed.config();
   }
 
   $w.addEventListener('load', NmcApp.init);
