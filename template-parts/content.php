@@ -5,7 +5,7 @@
       <?php if (has_excerpt()) : ?>
 				<section class="capa-post__detalhes hide-for-small-only">
 					<h2><?php the_excerpt(); ?></h2>
-					<time><?php printf( _x( '%s ago', '%s = human-readable time difference', 'your-text-domain' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ); ?></time>, <span class="author">por <?php the_author(); ?></span>
+					<time><?php printf( _x( '%s atrás', '%s = human-readable time difference', 'your-text-domain' ), human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ) ); ?></time>, <span class="author">por <?php the_author(); ?></span>
 				</section>
       <?php endif; ?>
 	</div>

@@ -234,6 +234,12 @@ footer {
 	text-align: justify;
 }
 
+@media screen and (min-width: 40em) {
+	.conteudo-post {
+		font-size: 1.2rem;
+	}
+}
+
 .comentarios-secao {
   border-top: 2px solid rgba(255,27,116,1);
   padding: 2rem 1rem;
@@ -256,7 +262,7 @@ footer {
 	align-items: center;
 }
 
-.row.row--full-width p {
+.row.row--full-width .conteudo-post > * {
 	max-width: 62.5rem;
 	width: 100%;
 	padding: 0 .9375rem;
@@ -265,4 +271,8 @@ footer {
 .row.row--full-width p.full-bleed {
 	max-width: 100%;
 	padding: 0;
+}
+
+.row.row--full-width p.full-bleed img {
+	width: 100%;
 }

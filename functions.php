@@ -58,7 +58,7 @@ add_post_type_support( 'my_custom_post_type', 'post-formats' );
 add_filter( 'embed_oembed_html', 'custom_youtube_oembed' );
 function custom_youtube_oembed( $code ){
     if( stripos( $code, 'youtube.com' ) !== FALSE && stripos( $code, 'iframe' ) !== FALSE )
-        $code = '<div class="flex-video widescreen">' . $code . '</div>';
+        $code = '<div class="row"><div class="column flex-video widescreen">' . $code . '</div></div>';
     return $code;
 }
 
