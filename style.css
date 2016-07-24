@@ -23,10 +23,15 @@ h1, h2, h3, h4, h5, h6 {
 body {
 	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'Roboto', 'Arial', sans-serif;
   background-color: rgba(238, 238, 238, 1);
+	color: #333;
 }
 
 a {
 	color: rgba(255,27,116,1);
+}
+
+a:hover {
+	color: rgba(200,15,86,1);
 }
 
 .relative {
@@ -110,6 +115,13 @@ a {
 .nmc-header__menu a:hover {
 	color: rgba(90,28,87,1);
 	background-color: rgba(255,204,0,1);
+}
+
+.nmc-header__right {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
 }
 
 .capa-post {
@@ -277,4 +289,49 @@ footer {
 
 .row.row--full-width p.full-bleed img {
 	width: 100%;
+}
+
+/*
+ *	SEARCH
+ */
+.search-form {
+	display: flex;
+	flex-direction: row;
+}
+
+.search-form label {
+	flex: 1;
+}
+
+.search-form .search-field {
+	background-color: transparent;
+	border: none;
+	border-bottom: .0625rem solid rgba(80,0,80,1);
+	box-shadow: none;
+	color: #333;
+}
+
+.nmc-header .search-form .search-field {
+	border-bottom: .0625rem solid rgba(255,204,0,1);
+	color: #fff;
+}
+
+.search-submit {
+	color: rgba(80,0,80,1);
+	padding: 0 2rem;
+	border-radius: .2rem;
+	transition: all .3s ease-in-out;
+}
+
+.nmc-header .search-submit {
+	color: rgba(255,204,0,1);
+}
+
+.search-submit:hover {
+	background-color: rgba(80,0,80,1);
+	color: #fff;
+}
+
+.nmc-header .search-submit:hover {
+	background-color: rgba(255,204,0,1);
 }

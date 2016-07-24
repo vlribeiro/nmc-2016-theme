@@ -56,7 +56,9 @@
 						<img src="<?php bloginfo('template_directory')?>/img/nmc-logo-site.png" width="200" alt="Logo Não Me Critica" />
 					</a>
 				</div>
-				<div class="column align-self-bottom">
+				<div class="column nmc-header__right">
+					<?php get_search_form(); ?>
+
           <?php if ( has_nav_menu('principal')) : ?>
   					<nav class="nmc-header__menu">
               <?php
