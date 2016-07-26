@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
@@ -72,3 +74,17 @@ function wpdocs_after_setup_theme() {
     add_theme_support( 'html5', array( 'search-form' ) );
 }
 add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
+
+
+// Load our function when hook is set
+add_action( 'pre_get_posts', 'modify_query_exclude_ouvintes' );
+// Create a function to excplude some categories from the main query
+function modify_query_exclude_ouvintes($query) {
+  $excludedCategoryName = 'ouvintes';
+  $excludedCategory = get_category_by_slug($excludedCategoryName);
+
+	// Check if on frontend and main query is modified
+  if (!is_admin() && $query->is_main_query() && $query->query_vars['category_name'] != $excludedCategoryName) {
+      $query->set( 'cat', '-' . $excludedCategory->term_id );
+  } // end if
+}

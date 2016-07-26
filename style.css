@@ -220,7 +220,28 @@ a:hover {
 
 footer {
 	background-color: rgba(80,0,80,1);
-	padding: 1rem;
+}
+
+footer .column {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+footer .footer-icons a {
+	display: inline-block;
+	background-color: rgba(255,204,0,1);
+	color: rgba(80,0,80,1);
+	border-radius: 100%;
+	width: 2rem;
+	height: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	transition: all .3s ease-in-out;
+}
+
+footer .footer-icons a:hover {
+	background-color: rgba(80,0,80,1);
+	color: rgba(255,204,0,1);
 }
 
 .titulo-post-mobile {

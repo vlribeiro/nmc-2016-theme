@@ -34,4 +34,5 @@
       <?php the_content(); ?>
     </div>
   </div>
+
 </article>
